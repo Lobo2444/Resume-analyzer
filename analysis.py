@@ -3,7 +3,7 @@ import os
 import streamlit as st
 import google.generativeai as genai
 import PyPDF2 # <-- ADDED: For reading PDF text
-# REMOVED: PIL, pdf2image, io, base64 are no longer needed
+
 
 # Load environment variables
 load_dotenv()
@@ -99,5 +99,6 @@ with col2:
                     response = get_gemini_response(job_desc, resume_text, prompt)
                     st.subheader("💡 Improvement Suggestions")
                     st.write(response)
+
 
 st.markdown("---")
